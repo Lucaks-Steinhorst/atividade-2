@@ -3,9 +3,6 @@ import {promisify} from "util";
 import authConfig from "../config/auth.js";
 
 export default async(req, res, next) => {
-    /**
-     * Implementar o middleware auth.js aqui
-     */
     const authHeader = req.headers.authorization;
     if(!authHeader) {
         return res.status(401).json({
